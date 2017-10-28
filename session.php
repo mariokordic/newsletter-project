@@ -1,8 +1,8 @@
 <?php
 // Establishing Connection with Server by passing server_name, user_id and password as a parameter
-$connection = mysql_connect("localhost", "mbit_wp1", "?*ilpKhdhD^%");
+$connection = mysql_connect("localhost", "username", "password");
 // Selecting Database
-$db = mysql_select_db("mbit_biovitamini", $connection);
+$db = mysql_select_db("db_name", $connection);
 session_start();// Starting Session
 // Storing Session
 $user_check=$_SESSION['login_user'];
