@@ -14,11 +14,7 @@ include('session.php');
     <b id="logout"><a href="logout.php">Log Out</a></b>
 </div>
 <?
-/* -------------------------------------------------------------------
-Script written by Adam Khoury @ www.developphp.com
-January 1, 2010
-Please retain this credit when displaying this code online
----------------------------------------------------------------------- */
+
 $name = "";
 $email = "";
 $msg_to_user = "";
@@ -27,7 +23,6 @@ if ($_POST['name'] != "" ){
 
 include('connect_to_mysql.php');
 
-// Be sure to filter this data to deter SQL injection, filter before querying database
 $name = $_POST['name'];
 $email = $_POST['email'];
 
