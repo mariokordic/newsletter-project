@@ -11,14 +11,14 @@ if (isset($_POST['submit'])) {
         $username=$_POST['username'];
         $password=$_POST['password'];
 // Establishing Connection with Server by passing server_name, user_id and password as a parameter
-        $connection = mysql_connect("localhost", "mbit_wp1","?*ilpKhdhD^%");
+        $connection = mysql_connect("localhost", "username","password");
 // To protect MySQL injection for Security purpose
         $username = stripslashes($username);
         $password = stripslashes($password);
         $username = mysql_real_escape_string($username);
         $password = mysql_real_escape_string($password);
 // Selecting Database
-        $db = mysql_select_db("mbit_biovitamini", $connection);
+        $db = mysql_select_db("db_name", $connection);
 // SQL query to fetch information of registerd users and finds user match.
         $psw = md5($password);
         $query = mysql_query("select * from login where password='$psw' AND username='$username'", $connection);
